@@ -28,6 +28,8 @@ public class Main {
 
 //-----------------------------------------Initialization of ArrayList-------------------------------------------------
 
+//Initialization ArrayList with 100 000 elements
+
         LocalDateTime arrayListStartOfInitialization = LocalDateTime.now();
         List<Integer>arrayList = new ArrayList<>();
         for (int i = 0; i < 100000; i++) {
@@ -39,6 +41,8 @@ public class Main {
                 .between( arrayListStartOfInitialization, arrayListFinishOfInitialization) + " milliseconds.");
 
 //---------------------------------------------Initialization of LinkedList--------------------------------------------
+
+//Initialization LinkedList with 100 000 elements
 
         LocalDateTime linkedListStartOfInitialization = LocalDateTime.now();
 List<Integer>linkedList = new LinkedList<>();
@@ -62,7 +66,7 @@ List<Integer>linkedList = new LinkedList<>();
 
 LocalDateTime arrayListStartIncertBegining = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(1,i);
+            arrayList.add(i,i);
         }
         LocalDateTime arrayListFinishIncertBegining = LocalDateTime.now();
 
@@ -77,7 +81,7 @@ LocalDateTime arrayListStartIncertBegining = LocalDateTime.now();
 
         LocalDateTime linkedListStartIncertBegining = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(1,i);
+            linkedList.add(i,i);
         }
         LocalDateTime linkedListFinishIncertBegining = LocalDateTime.now();
 
@@ -97,7 +101,7 @@ LocalDateTime arrayListStartIncertBegining = LocalDateTime.now();
 
         LocalDateTime arrayListStartIncertMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(5050 + 1,i);
+            arrayList.add(51000 + i ,i);
         }
         LocalDateTime arrayListFinishIncertMiddle = LocalDateTime.now();
 
@@ -110,7 +114,7 @@ LocalDateTime arrayListStartIncertBegining = LocalDateTime.now();
 
         LocalDateTime linkedListStartIncertMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(5050 + 1,i);
+            linkedList.add(51000 + i ,i);
         }
         LocalDateTime linkedListFinishIncertMiddle = LocalDateTime.now();
 
@@ -130,7 +134,7 @@ LocalDateTime arrayListStartIncertBegining = LocalDateTime.now();
 
 LocalDateTime arrayListStartIncertEnd = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(i);
+            arrayList.add(i, + i );
         }
         LocalDateTime arrayListFinishIncertEnd = LocalDateTime.now();
 
@@ -143,7 +147,7 @@ LocalDateTime arrayListStartIncertEnd = LocalDateTime.now();
 
 LocalDateTime linkedListStartIncertEnd = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(i);
+            linkedList.add(i ,+ i);
         }
         LocalDateTime linkedListFinishIncertEnd = LocalDateTime.now();
 
@@ -163,7 +167,7 @@ LocalDateTime linkedListStartIncertEnd = LocalDateTime.now();
 
         LocalDateTime arrayListStartUpdateBegining = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.set(i, i + 5);
+            arrayList.set(i,i + 1000);
         }
         LocalDateTime arrayListFinishUpdateBegining = LocalDateTime.now();
 
@@ -176,7 +180,7 @@ LocalDateTime linkedListStartIncertEnd = LocalDateTime.now();
 
 LocalDateTime linkedListStartUpdateBegining = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.set(i, i + 5);
+            linkedList.set(i,i + 1000);
         }
         LocalDateTime linkedListFinishUpdateBegining = LocalDateTime.now();
 
@@ -195,7 +199,7 @@ LocalDateTime linkedListStartUpdateBegining = LocalDateTime.now();
 
 LocalDateTime arrayListStartUpdateMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.set(5000 + i , i + 5);
+            arrayList.set(51000 + i,i + 1000);
         }
         LocalDateTime arrayListFinishUpdateMiddle = LocalDateTime.now();
 
@@ -208,7 +212,7 @@ LocalDateTime arrayListStartUpdateMiddle = LocalDateTime.now();
 
 LocalDateTime linkedListStartUpdateMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.set(5000 + i , i + 5);
+            linkedList.set(51000 + i,i + 1000);
         }
         LocalDateTime linkedListFinishUpdateMiddle = LocalDateTime.now();
 
@@ -227,7 +231,7 @@ LocalDateTime linkedListStartUpdateMiddle = LocalDateTime.now();
 
 LocalDateTime arrayListStartUpdateEnd = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.set(arrayList.size() - 1000 + i , i + 5);
+            arrayList.set(arrayList.size()- 1000 + i,i + 1000);
         }
         LocalDateTime arrayListFinishUpdateEnd = LocalDateTime.now();
 
@@ -240,7 +244,7 @@ LocalDateTime arrayListStartUpdateEnd = LocalDateTime.now();
 
         LocalDateTime linkedListStartUpdateEnd = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.set(arrayList.size() - 1000 + i , i + 5);
+            linkedList.set(arrayList.size()- 1000 + i,i + 1000);
         }
         LocalDateTime linkedListFinishUpdateEnd = LocalDateTime.now();
 
@@ -289,7 +293,7 @@ LocalDateTime arrayListStartUpdateEnd = LocalDateTime.now();
 
         LocalDateTime arrayListStartRemoveMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(5000 + i);
+            arrayList.remove(50000 + i);
         }
         LocalDateTime arrayListFinishRemoveMiddle = LocalDateTime.now();
 
@@ -302,7 +306,7 @@ LocalDateTime arrayListStartUpdateEnd = LocalDateTime.now();
 
 LocalDateTime linkedListStartRemoveMiddle = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(5000 + i);
+            linkedList.remove(50000 + i);
         }
         LocalDateTime linkedListFinishRemoveMiddle = LocalDateTime.now();
 
@@ -349,27 +353,27 @@ LocalDateTime linkedListStartRemoveEnd = LocalDateTime.now();
 
                 --------------Insert new 1000 elements at the begining---------------------
                 Array list for adding a 1000 elements at start needs a 42 milliseconds.
-                Linked list for adding a 1000 elements at start needs a 0 milliseconds.
+                Linked list for adding a 1000 elements at start needs a 43 milliseconds.
 
                 --------------Insert new 1000 elements at the middle of List---------------
                 ArrayList for adding a 1000 elements at the midlle needs a 42 milliseconds.
                 LinkedList for adding a 1000 elements at the midlle needs a 45 milliseconds.
 
                 ---------------Incert new 1000 elements at the end of Lists----------------
-                ArrayList for adding a 1000 elements at the end needs a 0 milliseconds.
-                LinkedList for adding a 1000 elements at the end needs a 0 milliseconds.
+                ArrayList for adding a 1000 elements at the end needs a 3 milliseconds.
+                LinkedList for adding a 1000 elements at the end needs a 1 milliseconds.
 
                 ----------------Update 1000 elements at the begining-----------------------
-                ArrayList for update a 1000 elements at the begining needs a 1 milliseconds.
-                LinkedList for update a 1000 elements at the begining needs a 0 milliseconds.
+                ArrayList for update a 1000 elements at the begining needs a 2 milliseconds.
+                LinkedList for update a 1000 elements at the begining needs a 1 milliseconds.
 
                 -------------------Update 1000 elements at the middle----------------------
-                ArrayList for update a 1000 elements at the middle needs a 1 milliseconds.
-                Linked List for update a 1000 elements at the middle needs a 0 milliseconds.
+                ArrayList for update a 1000 elements at the middle needs a 3 milliseconds.
+                Linked List for update a 1000 elements at the middle needs a 2 milliseconds.
 
                 --------------------Update 1000 elements at the end------------------------
-                Array List for update a 1000 elements at the end needs a 1 milliseconds.
-                Linked List for update a 1000 elements at the end needs a 0 milliseconds.
+                Array List for update a 1000 elements at the end needs a 4 milliseconds.
+                Linked List for update a 1000 elements at the end needs a 3 milliseconds.
 
                 --------------Remove 1000 elemetns at the begining of Lists----------------
                 Array List for remove a 1000 elements at the begining needs a 58 milliseconds.
@@ -380,8 +384,8 @@ LocalDateTime linkedListStartRemoveEnd = LocalDateTime.now();
                 Linked List for remove a 1000 elements at the middle needs a 13 milliseconds.
 
                 -----------------Remove 1000 elements at the end of Lists------------------
-                Array List for remove a 1000 elements at the end needs a 0 milliseconds.
-                Linked List for remove a 1000 elements at the end needs a 0 milliseconds.*/
+                Array List for remove a 1000 elements at the end needs a 5 milliseconds.
+                Linked List for remove a 1000 elements at the end needs a 9 milliseconds.*/
     }
 }
 
